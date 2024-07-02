@@ -1,10 +1,9 @@
 "use client";
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect } from "react";
 import BenefitsSection from "../components/BenefitsSection";
-import gsap from "gsap";
 import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SmartFeatures from "../components/SmartFeatures";
 
 
 export default function Home() {
@@ -23,10 +22,8 @@ export default function Home() {
       <main className="text-white bg-black">
         <Navbar />
         <HeroSection />
-        
         <BenefitsSection />
-        
-        <div className="h-screen bg-blue-300"></div>
+        <SmartFeatures />
       </main>
     </>
   );
