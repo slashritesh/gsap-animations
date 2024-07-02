@@ -15,9 +15,9 @@ export default function HeaderSection() {
           </h1>
         </div>
         <div className="flex z-20 gap-5 items-end">
-          {["picture", "Sound", "Design", "Eco-friendly"].map((item) => {
+          {["picture", "Sound", "Design", "Eco-friendly"].map((item,index) => {
             return (
-              <h3 className="text-lg rounded-full px-5 py-2 border">{item}</h3>
+              <h3 key={index} className="text-lg rounded-full px-5 py-2 border">{item}</h3>
             );
           })}
         </div>

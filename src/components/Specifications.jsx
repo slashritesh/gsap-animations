@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 function Specifications(props) {
   const { text, highlight } = props;
@@ -17,9 +18,10 @@ function Specifications(props) {
       </div>
       <div className=" flex-1">
         <div className="">
-          {highlight.map((item) => {
+          {highlight.map((item,index) => {
             return (
               <motion.div
+                key={index}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 2 }}
@@ -30,7 +32,7 @@ function Specifications(props) {
                 whileInView={{ scale : 1}}
                 transition={{ duration: 0.9 }}
                 className="h-[450px] w-[300px]">
-                <img
+                <Image
                   className="h-full w-full object-cover"
                   src={item.imageurl}
                   alt={item.text}
